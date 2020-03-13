@@ -1,0 +1,16 @@
+{
+  "name": "APICarcara",
+  "version": "1.0.0",
+  "description": "api de  comunicação que está no core  do simulador de circuitos elétricos eletrônicos ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcos Ramos",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}
