@@ -1,5 +1,5 @@
 {
-  "name": "APICarcara",
+  "name": "apicarcara",
   "version": "1.0.0",
   "description": "api de  comunicação que está no core  do simulador de circuitos elétricos eletrônicos ",
   "main": "index.js",
