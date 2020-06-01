@@ -1,0 +1,22 @@
+{
+  "name": "apicarcara",
+  "version": "1.0.0",
+  "description": "API de comunicação que está no core do simulador de circuitos elétricos eletrônicos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaDICAUEFS/APICarcara.git"
+  },
+  "author": "Marcos Ramos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaDICAUEFS/APICarcara/issues"
+  },
+  "homepage": "https://github.com/LaDICAUEFS/APICarcara#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
