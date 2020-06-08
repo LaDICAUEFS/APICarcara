@@ -1,28 +1,32 @@
-
 <%- include('partials/hearder.ejs'); %> 
+
 <body> 
+
     <%- include('partials/navbar.ejs'); %>
 
     <div class="container">
     
         <div class="card" id="form-simu"> 
 
-            <div class="card-header">
-
+          <div class="card-header">
 
             </div>
 
-            <div class="card-body">
+             <div class="card-body">
                      
-                <form>
+                <form  method="POST"  action="/">
+
                     <div class="row">
         
-                    <div class="col-md-10 offset-md-1"> 
+                      <div class="col-md-10 offset-md-1"> 
                         
-                        <br/><textarea placeholder="Lista de dados a ser analisado" class="form-control" rows="19"></textarea>
+                          <textarea placeholder="Lista de dados a ser analisado" class="form-control" rows="19"></textarea>
         
-                        <br/><button type="button" class="btn btn-dark" >Analisar </button>
-                    </div>
+                           <br/>
+
+                            <button class="btn btn-dark" >Analisar </button>
+
+                      </div>
                 
                     </div>
                 

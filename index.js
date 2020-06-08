@@ -8,4 +8,9 @@ app.get("/",(req,res)=>{
     res.render("index.ejs");
 });
 
+app.post("/",(req, res) => {
+     res.json({
+         teste:"teste"
+     })
+});
 app.listen(3200,()=>{console.log("Api em execução!");});
