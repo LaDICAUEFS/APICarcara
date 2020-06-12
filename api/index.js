@@ -20,7 +20,7 @@ app.get("/",(req,res)=>{
 app.post("/",(req, res) => {
 
          res.send("teste!");
-         res.status(200);
+         res.status=-200;
     /*fs.writeFile('./upload/message.txt', 'Hello World! \r \n',{enconding:'utf-8',flag: 'a'}, function (err) {
         if (err) throw err;
         console.log('Arquivo salvo!');
@@ -40,14 +40,6 @@ app.post("/",(req, res) => {
         console.log("The file was saved!");
     }); 
    */
-});
-
-app.put("/:id",(req,res)=>{
-
-})
-
-app.delete("/:id",(req,res)=>{
-
 });
 
 app.listen(3200,()=>{console.log("Api em execução!");});
