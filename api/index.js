@@ -11,35 +11,32 @@ app.use(bodyParser.json());
 
 app.get("/",(req,res)=>{
 
+    fs.readFile("../upload/test.txt","utf-8",(err, data)=> {
+        if(err) throw err;
+        console.log(data);
+    });
+
     res.json({
-            teste:"teste"                   // o json  com os os dados 
+            teste:"teste"                   // o json  com os os dados  para  teste
     });
     res.status(200);
+
 });
 
 app.post("/",(req, res) => {
 
-         res.send("teste!");
-         res.status=-200;
-    /*fs.writeFile('./upload/message.txt', 'Hello World! \r \n',{enconding:'utf-8',flag: 'a'}, function (err) {
-        if (err) throw err;
-        console.log('Arquivo salvo!');
-    });
-
-    const calback = (err)=>{
-        if (err) throw err;
-        console.log('Arquivo salvo!');
-    }
-    res.statusCode= 200;
-
-    fs.writeFile("../upload/test.txt", "Hey there!","utf8", function(err) {
+    fs.writeFile("../upload/test.txt","Hey there!","utf8", (err)=> {
         if(err) {
             return console.log(err);
         }
-    
-        console.log("The file was saved!");
-    }); 
-   */
-});
+        console.log("arquivo salvo !");
+    });
 
+    res.json({
+        teste:"teste"                   // o json  com os os dados  para teste 
+    });
+    
+    res.status(200);
+  
+});
 app.listen(3200,()=>{console.log("Api em execução!");});

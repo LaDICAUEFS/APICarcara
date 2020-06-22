@@ -75,7 +75,7 @@
 
              console.log(myJson);
 
-            /*axios.post("http://localhost:3200/",myJson)
+            axios.post("http://localhost:3200/",myJson)
               .then(response =>{
       
                if(response.status == 200){
@@ -84,14 +84,14 @@
 
                }).catch(err =>{
                   console.log(err);
-                 });*/
+                 });
         
               document.getElementById("dataResu").value = JSON.parse(myJson);             
             }
 
             function displayData(){
 
-          /*    axios.get("http://localhost:3200/")
+             axios.get("http://localhost:3200/")
                 .then(response =>{
                   let resul= JSON.parse(response.data);
                   let dado = resul.split(",");
@@ -99,9 +99,8 @@
 
                 }).catch(err =>{
                     console.log(err);
-                });*/
+                });
 
-            
             }
 
       </script>
