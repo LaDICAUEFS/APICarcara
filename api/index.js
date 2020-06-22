@@ -36,6 +36,7 @@ app.post("/",(req, res) => {
         teste:"teste"                   // o json  com os os dados  para teste 
     });
     
+    console.log(res.body);
     res.status(200);
   
 });
