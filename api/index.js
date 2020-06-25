@@ -11,20 +11,23 @@ app.use(bodyParser.json());
 
 app.get("/",(req,res)=>{
 
-        res.sendStatus=200;
-        
-          /*    let dados;
             fs.readFile("../dados/data.txt","utf-8", function(err,dados){
-            if(err)
+            if(err){
+                res.status(404);
                 console.log(err)
-            else
-                console.log(dados);
-            });*/
-         let dados = fs.readFileSync("../dados/data.txt","utf-8" );
+            }
+            else{
+
+                res.sendStatus=200;
+                let ad = JSON.stringify(dados);
+                res.json(ad);
+              }
+            });
+        /* let dados = fs.readFileSync("../dados/data.txt","utf-8" );
 
          console.log(dados);
 
-         //console.log(contents +" teste");
+         //console.log(contents +" teste");*/
 
         res.json({
             teste:"teste"                   // o json  com os os dados  para  teste
