@@ -11,33 +11,38 @@ app.use(bodyParser.json());
 
 app.get("/",(req,res)=>{
 
-    fs.readFile("../upload/test.txt","utf-8",(err, data)=> {
-        if(err) throw err;
-        console.log(data);
-    });
+        res.sendStatus=200;
+        
+          /*    let dados;
+            fs.readFile("../dados/data.txt","utf-8", function(err,dados){
+            if(err)
+                console.log(err)
+            else
+                console.log(dados);
+            });*/
+         let dados = fs.readFileSync("../dados/data.txt","utf-8" );
 
-    res.json({
+         console.log(dados);
+
+         //console.log(contents +" teste");
+
+        res.json({
             teste:"teste"                   // o json  com os os dados  para  teste
     });
-    res.status(200);
-
+    
 });
 
-app.post("/",(req, res) => {
+app.post("/",(req,res) => {
+    let dado = req.body.dado;
 
-    fs.writeFile("../upload/test.txt","Hey there!","utf8", (err)=> {
-        if(err) {
-            return console.log(err);
+    fs.writeFile("../dados/data.txt", dado, (error) =>{
+        if(error){
+            console.log(error);
+        }else{
+            console.log("teste");
         }
-        console.log("arquivo salvo !");
     });
-
-    res.json({
-        teste:"teste"                   // o json  com os os dados  para teste 
-    });
+    res.sendStatus(200);
     
-    console.log(res.body);
-    res.status(200);
-  
 });
 app.listen(3200,()=>{console.log("Api em execução!");});

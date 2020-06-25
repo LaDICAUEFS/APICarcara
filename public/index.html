@@ -6,9 +6,9 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-          <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/style.css"> 
 
-           <link rel="shortcut icon" href="favicon.ico"> 
+        <link rel="shortcut icon" href="favicon.ico"> 
 
         <title>API Carcara </title>
    </head>
@@ -20,7 +20,7 @@
         
                     <a class="navbar-brand">           
                     </a>
-                       <img src="assets/img/carcara.png"> 
+                    <img src="assets/img/carcara.png"> 
                       <h1>  Carcará API </h1>
              </nav>
          </div>
@@ -46,7 +46,7 @@
             
                               <br/> <textarea id="dataResu" placeholder="Resultado da analise será exibido aqui" name="dataResult"  class="form-control" rows="10" readonly></textarea>
 
-                              <br/> <button type="button" class="btn btn-dark" onclick="createAnalise()" >Analisar </button>
+                              <br/> <button type="button" class="btn btn-dark" onclick="displayData()" >Analisar </button>
                           </div>
                     
                         </div>
@@ -68,19 +68,13 @@
     <script>     
           function createAnalise(){
              let dataInp = document.getElementById("dataInp").value;
-             let analise = dataInp.split("\n");
-             let json = analise.map(element => {
-                 return {
-                     dado: element
-                 }
-             });
-             //let myJson= Object.assign({},analise);
-             //let myJson = JSON.parse(analise);
+             let json = {dado: dataInp}
              console.log(json);
              axios.post("http://localhost:3200/",json)
               .then(response =>{
-               if(response.status == 'OK'){
-                  alert("o resultado da Analise saíra logo agurade ");
+               if(response.data == "OK"){
+                  console.log("o resultado da Analise saíra logo agurade ");
+                 
                   }
                }).catch(err =>{
                   console.log(err);
@@ -92,10 +86,10 @@
                 .then(response =>{
                   let resul= JSON.stringify(response.data);
                   document.getElementById('dataResu').innerHTML = resul;
+                  console.log("teste");
                 }).catch(err =>{
                     console.log(err);
                 });
             }
       </script>
 </html>
-
