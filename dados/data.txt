@@ -1,9 +1,1 @@
-teste
-de 
-dados
-e
-emviado
-para
-testar
-ok
-teste 
+[{"dado":"teste"},{"dado":"de"},{"dado":"dados"},{"dado":"para"},{"dado":"analise"},{"dado":"do simulador"},{"dado":"carcara"}]

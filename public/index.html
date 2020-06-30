@@ -46,7 +46,7 @@
             
                               <br/> <textarea id="dataResu" placeholder="Resultado da analise será exibido aqui" name="dataResult"  class="form-control" rows="10" readonly></textarea>
 
-                              <br/> <button type="button" class="btn btn-dark" onclick="displayData()" >Analisar </button>
+                              <br/> <button type="button" class="btn btn-dark" onclick="createAnalise()" >Analisar </button>
                           </div>
                     
                         </div>
@@ -54,8 +54,7 @@
                     </form>
                     
                 </div>
-            </div>
-    
+            </div>  
       </div>
         
    </body>
@@ -74,12 +73,14 @@
               .then(response =>{
                if(response.data == "OK"){
                   console.log("o resultado da Analise saíra logo agurade ");
-                 
-                  }
+                }
                }).catch(err =>{
                   console.log(err);
                });
-              //document.getElementById("dataResu").innerHTML = JSON.stringify(json);             
+                  alert("o resultado da Analise saíra logo agurade!");
+                setTimeout(() => {
+                    displayData();             
+                },5000);
             }
             function displayData(){
              axios.get("http://localhost:3200/")
