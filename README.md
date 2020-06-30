@@ -32,7 +32,7 @@ API de comunicação que está no core  do simulador de circuitos elétricos ele
 # Estuturação de diretórios  
 >API está dívida em três diretórios que são:
 >
-> > ![ Estuturação de diretórios ](./img/img-1.png)
+> > ![ Estuturação de diretórios ](https://github.com/LaDICAUEFS/APICarcara/blob/master/img/img-1.PNG)
 >
 > * **api** : ***nele se encontrar o core da api, responsável por realizar os processos serialização e desserialização com os dados que são enviados para analise, produzindo assim os a lista de dados que vão se analisados matematicamente.***
 >
